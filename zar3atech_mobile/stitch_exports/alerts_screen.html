@@ -1,0 +1,245 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Digital Greenhouse | Alerts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#ffffff",
+              "inverse-surface": "#2a3235",
+              "on-secondary-fixed": "#0b2000",
+              "on-background": "#151d20",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#93d962",
+              "primary-fixed": "#bcf0ae",
+              "primary-fixed-dim": "#a1d494",
+              "surface-container-high": "#e1e9ee",
+              "outline": "#72796e",
+              "on-tertiary": "#ffffff",
+              "tertiary-container": "#50513f",
+              "on-secondary-fixed-variant": "#245100",
+              "tertiary-fixed": "#e4e4cc",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#c8c8b0",
+              "secondary-container": "#aef67b",
+              "on-tertiary-fixed-variant": "#474836",
+              "on-primary-fixed": "#002201",
+              "background": "#f3fbff",
+              "inverse-on-surface": "#eaf2f6",
+              "secondary-fixed": "#aef67b",
+              "on-tertiary-fixed": "#1b1d0e",
+              "surface-dim": "#d3dbe0",
+              "on-secondary-container": "#357200",
+              "surface-container-highest": "#dce4e8",
+              "outline-variant": "#c2c9bb",
+              "on-surface": "#151d20",
+              "primary-container": "#2d5a27",
+              "on-surface-variant": "#42493e",
+              "surface-bright": "#f3fbff",
+              "on-error": "#ffffff",
+              "surface-variant": "#dce4e8",
+              "on-primary-fixed-variant": "#23501e",
+              "surface": "#f3fbff",
+              "primary": "#154212",
+              "on-tertiary-container": "#c3c4ac",
+              "inverse-primary": "#a1d494",
+              "surface-container": "#e7eff3",
+              "secondary": "#326b00",
+              "error-container": "#ffdad6",
+              "tertiary": "#393a29",
+              "surface-container-low": "#edf5f9",
+              "on-error-container": "#93000a",
+              "error": "#ba1a1a",
+              "surface-tint": "#3b6934",
+              "on-primary-container": "#9dd090"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-line-rule { border: none !important; }
+      .tonal-shift-bg-surface-container-low { background-color: #edf5f9; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f3fbff]/70 dark:bg-[#151d20]/70 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full no-line-rule tonal-shift-bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#154212] dark:text-[#edf5f9]" data-icon="potted_plant" style="">potted_plant</span>
+<span class="font-['Manrope'] font-black tracking-tighter text-[#154212] dark:text-[#edf5f9] text-lg" style=""><h1 class="font-['Manrope'] font-bold text-lg tracking-tight text-[#154212] dark:text-[#edf5f9]" style="--tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; --tw-text-opacity: 1; color: rgb(21, 66, 18); outline: none !important;">Zra3Tech</h1></span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Manrope'] font-bold text-lg tracking-tight text-[#151d20]/60 dark:text-[#edf5f9]/60 hover:bg-[#edf5f9] dark:hover:bg-[#2D5A27]/20 transition-colors px-3 py-1 rounded-full" href="#" style="">Accueil</a>
+<a class="font-['Manrope'] font-bold text-lg tracking-tight text-[#151d20]/60 dark:text-[#edf5f9]/60 hover:bg-[#edf5f9] dark:hover:bg-[#2D5A27]/20 transition-colors px-3 py-1 rounded-full" href="#" style="">Champs</a>
+<a class="font-['Manrope'] font-bold text-lg tracking-tight text-[#2D5A27] dark:text-[#edf5f9] px-3 py-1 rounded-full" href="#" style="">Alertes</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#edf5f9] transition-colors" style="">
+<span class="material-symbols-outlined" style="">search</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional agronomist smiling in a modern office environment with warm natural lighting" src="https://img.freepik.com/premium-photo/man-overalls-hat-standing-front-tractor-portrait-farmer-digital-image_87646-25366.jpg" style="">
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
+<!-- Hero Header Section -->
+<header class="mb-12">
+<h1 class="font-headline text-5xl font-extrabold text-primary tracking-tight mb-4" style="">Alertes</h1>
+<p class="text-on-surface-variant max-w-xl text-lg" style="">Surveillance en temps réel et détection d'anomalies pour votre réseau d'irrigation de précision. Gérez les seuils critiques et la santé du système.</p>
+</header>
+<!-- Stats Overview Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-[0_12px_32px_rgba(21,29,32,0.04)] flex flex-col justify-between">
+<span class="text-error font-label font-bold uppercase tracking-widest text-[10px]" style="">Niveaux critiques</span>
+<div class="mt-4">
+<span class="font-headline text-4xl font-bold" style="">01</span>
+<p class="text-on-surface-variant text-sm mt-1" style="">Systèmes approchant des seuils</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-[0_12px_32px_rgba(21,29,32,0.04)] flex flex-col justify-between">
+<span class="text-secondary font-label font-bold uppercase tracking-widest text-[10px]" style="">Avertissements</span>
+<div class="mt-4">
+<span class="font-headline text-4xl font-bold" style="">04</span>
+<p class="text-on-surface-variant text-sm mt-1" style="">Systèmes approchant des seuils</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-[0_12px_32px_rgba(21,29,32,0.04)] flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-full -mr-12 -mt-12"></div>
+<span class="text-primary font-label font-bold uppercase tracking-widest text-[10px]" style="">Nœuds sains</span>
+<div class="mt-4">
+<span class="font-headline text-4xl font-bold" style="">98%</span>
+<p class="text-on-surface-variant text-sm mt-1" style="">Temps de fonctionnement opérationnel par secteur</p>
+</div>
+</div>
+</div>
+<!-- Alerts List -->
+<section class="space-y-6">
+<!-- Filter Pills -->
+<div class="flex gap-3 mb-8 overflow-x-auto pb-2 no-scrollbar">
+<button class="bg-primary text-white px-6 py-2 rounded-full text-sm font-medium" style="">Toutes les alertes</button>
+<button class="bg-surface-container-low text-on-surface px-6 py-2 rounded-full text-sm font-medium hover:bg-surface-container-high transition-colors" style="">Critique</button>
+<button class="bg-surface-container-low text-on-surface px-6 py-2 rounded-full text-sm font-medium hover:bg-surface-container-high transition-colors" style="">Avertissement</button>
+<button class="bg-surface-container-low text-on-surface px-6 py-2 rounded-full text-sm font-medium hover:bg-surface-container-high transition-colors" style="">Maintenance</button>
+</div>
+<!-- CRITICAL ALERT CARD -->
+<div class="group relative bg-surface-container-lowest rounded-lg p-6 shadow-[0_12px_32px_rgba(21,29,32,0.04)] hover:shadow-[0_20px_48px_rgba(21,29,32,0.08)] transition-all duration-300 flex flex-col md:flex-row gap-6 border-l-8 border-error">
+<div class="flex-shrink-0">
+<div class="w-14 h-14 rounded-2xl bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">warning</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center justify-between mb-2">
+<span class="bg-error-container text-on-error-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tighter" style="">Alerte Critique</span>
+<span class="text-on-surface-variant text-xs font-label" style="">Il y a 2 minutes</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 leading-tight" style="">Le taux d'humidité à South Pasture est tombé à 10%</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6" style="">Action urgente requise. Le capteur ID: SP-449 signale un stress hydrique critique. L'activation automatique de la vanne a échoué.</p>
+<div class="flex gap-3">
+<button class="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/20 active:scale-95 transition-all" style="">Forcer la vanne</button>
+<button class="bg-surface-container-low text-on-surface px-6 py-2.5 rounded-full text-sm font-bold active:scale-95 transition-all" style="">Ignorer</button>
+</div>
+</div>
+</div>
+<!-- WARNING ALERT CARD -->
+<div class="group relative bg-surface-container-lowest rounded-lg p-6 shadow-[0_12px_32px_rgba(21,29,32,0.04)] hover:shadow-[0_20px_48px_rgba(21,29,32,0.08)] transition-all duration-300 flex flex-col md:flex-row gap-6 border-l-8 border-secondary">
+<div class="flex-shrink-0">
+<div class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-3xl" style="">thermostat</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center justify-between mb-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tighter" style="">Alerte Météo</span>
+<span class="text-on-surface-variant text-xs font-label" style="">Il y a 4 heures</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 leading-tight" style="">La canicule prévue mardi pourrait augmenter le taux d'évaporation de 20%</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6" style="">Le système suggère un cycle d'arrosage profond préventif pour tous les secteurs de North Vineyard à partir de lundi 22:00.</p>
+<div class="flex gap-3">
+<button class="bg-secondary text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-secondary/20 active:scale-95 transition-all" style="">Ajuster le calendrier</button>
+<button class="bg-surface-container-low text-on-surface px-6 py-2.5 rounded-full text-sm font-bold active:scale-95 transition-all" style="">Détails</button>
+</div>
+</div>
+</div>
+<!-- INFO ALERT CARD -->
+<div class="group relative bg-surface-container-lowest rounded-lg p-6 shadow-[0_12px_32px_rgba(21,29,32,0.04)] hover:shadow-[0_20px_48px_rgba(21,29,32,0.08)] transition-all duration-300 flex flex-col md:flex-row gap-6 border-l-8 border-primary-fixed">
+<div class="flex-shrink-0">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" style="">settings_input_component</span>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center justify-between mb-2">
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tighter" style="">Info Système</span>
+<span class="text-on-surface-variant text-xs font-label" style="">Hier, 14:30</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 leading-tight" style="">Maintenance planifiée terminée pour la pompe de North Vineyard</h3>
+<p class="text-on-surface-variant leading-relaxed" style="">Pression de l'unité de pompage P-88 rétablie à 4,2 bar. Tous les tests de diagnostic ont réussi. Reprise des opérations normales.</p>
+</div>
+</div>
+<!-- ANOTHER WARNING CARD (Bento Style Variation) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-low p-6 rounded-lg relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex justify-between items-start mb-4">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-xl" style="">battery_alert</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant" style="">SENSOR NV-12</span>
+</div>
+<h4 class="font-bold mb-1" style="">Avertissement batterie faible</h4>
+<p class="text-sm text-on-surface-variant" style="">La batterie du capteur périphérique NV-12 est à 8%. La transmission des données peut devenir intermittente.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex justify-between items-start mb-4">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-xl" style="">cloud_sync</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant" style="">NETWORK</span>
+</div>
+<h4 class="font-bold mb-1" style="">Synchronisation de la passerelle</h4>
+<p class="text-sm text-on-surface-variant" style="">La passerelle principale s'est synchronisée avec succès avec les prévisions météo à 06:00 UTC.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-4 bg-white/80 dark:bg-[#151d20]/80 backdrop-blur-2xl rounded-t-[2.5rem] z-50 no-line-rule shadow-[0_-8px_32px_rgba(21,29,32,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#151d20]/50 dark:text-[#edf5f9]/50 px-6 py-2 hover:text-[#154212] transition-all active:scale-90 duration-300 ease-out" href="#" style="">
+<span class="material-symbols-outlined" style="">home_max</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider" style="">Accueil</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#151d20]/50 dark:text-[#edf5f9]/50 px-6 py-2 hover:text-[#154212] transition-all active:scale-90 duration-300 ease-out" href="#" style="">
+<span class="material-symbols-outlined" style="">psychology_alt</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider" style="">Champs</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#154212] to-[#2D5A27] text-white rounded-full px-6 py-2 active:scale-90 duration-300 ease-out" href="#" style="">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">notifications_active</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider" style="">Alertes</span>
+</a>
+</nav>
+<!-- FAB (Suppressed on Alerts screen as per UX guidelines to prioritize content focus) -->
+</body></html>

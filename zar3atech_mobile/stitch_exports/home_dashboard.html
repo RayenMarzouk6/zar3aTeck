@@ -1,0 +1,225 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tableau de bord de la serre numérique</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#72796e",
+              "on-surface": "#151d20",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#e4e4cc",
+              "on-surface-variant": "#42493e",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#1b1d0e",
+              "secondary-fixed-dim": "#93d962",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#a1d494",
+              "secondary": "#326b00",
+              "secondary-container": "#aef67b",
+              "tertiary": "#393a29",
+              "on-primary-fixed": "#002201",
+              "on-primary-fixed-variant": "#23501e",
+              "surface-variant": "#dce4e8",
+              "secondary-fixed": "#aef67b",
+              "surface-bright": "#f3fbff",
+              "surface-container-high": "#e1e9ee",
+              "on-secondary-fixed-variant": "#245100",
+              "on-secondary-container": "#357200",
+              "on-background": "#151d20",
+              "on-tertiary-fixed-variant": "#474836",
+              "outline-variant": "#c2c9bb",
+              "inverse-on-surface": "#eaf2f6",
+              "on-primary": "#ffffff",
+              "on-tertiary-container": "#c3c4ac",
+              "primary-container": "#2d5a27",
+              "surface-dim": "#d3dbe0",
+              "inverse-primary": "#a1d494",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#c8c8b0",
+              "surface-container-highest": "#dce4e8",
+              "surface-container": "#e7eff3",
+              "surface-tint": "#3b6934",
+              "on-secondary-fixed": "#0b2000",
+              "primary": "#154212",
+              "tertiary-container": "#50513f",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#bcf0ae",
+              "surface-container-lowest": "#ffffff",
+              "inverse-surface": "#2a3235",
+              "background": "#f3fbff",
+              "surface-container-low": "#edf5f9",
+              "error": "#ba1a1a",
+              "surface": "#f3fbff",
+              "on-primary-container": "#9dd090"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-line-rule { border: none !important; }
+      .tonal-shift-bg-surface-container-low { background-color: #edf5f9; }
+      body { background-color: #f3fbff; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body text-on-surface">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f3fbff]/70 dark:bg-[#151d20]/70 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#154212] dark:text-[#edf5f9]" style="">potted_plant</span>
+<h1 class="font-['Manrope'] font-bold text-lg tracking-tight text-[#154212] dark:text-[#edf5f9]" style="">Zra3Tech</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-[#edf5f9] transition-colors active:scale-95 duration-200" style=""><img alt="Profil du Conservateur" class="w-full h-full rounded-full object-cover" src="https://img.freepik.com/premium-photo/man-overalls-hat-standing-front-tractor-portrait-farmer-digital-image_87646-25366.jpg" style=""></button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto space-y-8">
+<!-- Welcome Header & Status -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<p class="font-label text-label-md text-on-surface-variant uppercase tracking-widest mb-1" style="">BONJOUR, CONSERVATEUR</p>
+<h2 class="font-headline text-3xl font-extrabold text-primary" style="">Tableau de bord de la serre</h2>
+</div>
+<!-- Status Indicator -->
+<div class="flex items-center gap-2 px-4 py-2 bg-primary-fixed text-on-primary-fixed rounded-full shadow-[0_0_20px_rgba(188,240,174,0.4)]">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label text-sm font-semibold" style="">Sain</span>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Main Central Card: Soil Moisture -->
+<section class="md:col-span-8 bg-surface-container-lowest rounded-lg p-8 flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<h3 class="font-headline text-xl text-primary mb-8 self-start" style="">Humidité du sol</h3>
+<div class="relative flex items-center justify-center mb-6">
+<!-- Simple SVG Circular Gauge -->
+<svg class="w-48 h-48 transform -rotate-90">
+<circle class="text-surface-container-low" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-primary-container" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-dasharray="552.92" stroke-dashoffset="176.93" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-headline text-5xl font-black text-on-surface" style="">68%</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-tighter" style="">Plage Optimale</span>
+</div>
+</div>
+<div class="w-full grid grid-cols-2 gap-4 mt-4">
+<div class="p-4 bg-surface-container-low rounded-DEFAULT flex flex-col items-center">
+<span class="font-label text-[10px] text-on-surface-variant uppercase" style="">Cible</span>
+<span class="font-headline text-lg font-bold text-primary" style="">70%</span>
+</div>
+<div class="p-4 bg-surface-container-low rounded-DEFAULT flex flex-col items-center">
+<span class="font-label text-[10px] text-on-surface-variant uppercase" style="">Dernière lecture</span>
+<span class="font-headline text-lg font-bold text-primary" style="">Il y a 2m</span>
+</div>
+</div>
+</section>
+<!-- Weather Widget -->
+<section class="md:col-span-4 bg-gradient-to-br from-primary to-primary-container rounded-lg p-8 text-white flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-lg font-bold" style="">Climat local</h3>
+<p class="font-label text-xs text-on-primary-container" style="">Section A de la serre</p>
+</div>
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: &quot;FILL&quot; 1;">wb_sunny</span>
+</div>
+<div class="mt-8">
+<span class="font-headline text-6xl font-black" style="">28°C</span>
+<p class="font-body text-sm text-on-primary-container mt-1" style="">Ensoleillé avec une légère brise</p>
+</div>
+<div class="mt-8 pt-6 border-t border-on-primary-container/20 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" style="">humidity_mid</span>
+<span class="font-label text-sm" style="">45% d'humidité</span>
+</div>
+<span class="material-symbols-outlined text-lg" style="">arrow_forward</span>
+</div>
+</section>
+<!-- AI Recommendation Section -->
+<section class="md:col-span-12 bg-surface-container-high rounded-lg p-6 flex flex-col md:flex-row items-center gap-6">
+<div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">psychology</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h4 class="font-headline text-lg font-bold text-primary" style="">Recommandation IA</h4>
+<p class="font-body text-on-surface-variant" style="">Attendez 4 heures avant le prochain cycle. Les taux d'évapotranspiration sont plus bas que prévu aujourd'hui.</p>
+</div>
+<button class="px-8 py-3 bg-primary text-white rounded-full font-headline text-sm font-bold shadow-lg active:scale-95 transition-transform" style="">Voir les détails</button>
+</section>
+<!-- Subtle Alert Banner (Conditional) -->
+<div class="md:col-span-12">
+<div class="bg-tertiary-fixed/30 rounded-DEFAULT p-4 flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary" style="">info</span>
+<p class="font-body text-sm text-on-tertiary-fixed-variant" style="">Maintenance du système prévue ce soir à 23h00. L'irrigation restera manuelle pendant cette période.</p>
+</div>
+</div>
+<!-- Additional Detail Cards (To show Bento depth) -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-lg p-6 flex flex-col gap-4">
+<img class="w-full h-32 object-cover rounded-DEFAULT" data-alt="close-up of vibrant green plant leaves with dew drops in a modern greenhouse environment soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCumRveTDFJZEsFVQ9B9rNnGNI5yd0bC_CtzuPYCrL6gcII-XE5PObKK8IerScTSwZXkv6iepp_KLKMWp6ZMBQ6BA6FA9XBBpmJkzJjq50qVQF4pZG3HK2RZNiOm2vFr2xA9sTTwblKuYQUyPhptXbmwdoPr8cvE9LgFMF8CMn8avBk6de_1gT1M8MtgYkM6bBhVZxrjmvvA9BGMs8Ag6r08dABDIIgipUtGs1mAt0bAG6C7P377EPksWzgLl0lafqvQrWosC5Zhypw" style="">
+<div class="flex justify-between items-center">
+<h5 class="font-headline font-bold text-primary" style="">Statut des Buses</h5>
+<span class="font-label text-[10px] px-2 py-1 bg-secondary-container text-on-secondary-container rounded-full" style="">Toutes actives</span>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-lowest rounded-lg p-6 flex flex-col gap-4">
+<img class="w-full h-32 object-cover rounded-DEFAULT" data-alt="macro shot of automated irrigation nozzle spraying fine mist onto organic vegetable crops inside glass structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7IDH9bwvckF0M7IbgkoCwuA8H9X4jSNK4VlZEEWsxb3azBxCfedYnVB7E_qQyy_JEnaLS44hrL1yfhUipT3ctbm98S2WvLvmt6guXwF6yxN-2Amn06Wh2ZXY-QJkv8KywDrSp4GjOAwQdx3Ud6igcuKya8dfqOwIuHCGD0-8qX9RovYzUfQh0dWPj6s3xU73HwpQtjY3ddOL6Ip4RK1GdYrweKlyObOvCu13e66uCnio_vkDYBmCJPEtblpV_mEquDyFAGGG3h7d-" style="">
+<div class="flex justify-between items-center">
+<h5 class="font-headline font-bold text-primary" style="">Prévisions de rendement</h5>
+<span class="font-label text-[10px] px-2 py-1 bg-primary-fixed text-on-primary-fixed rounded-full" style="">+12% projeté</span>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-lowest rounded-lg p-6 flex flex-col gap-4">
+<img class="w-full h-32 object-cover rounded-DEFAULT" data-alt="aerial view of structured rectangular plant beds in a large scale commercial greenhouse with glowing artificial lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBknA0JyCtJwpFAzPCrnf7dpDDZ3s3WpF7nOFuwJQt8cr0uFoD0hags2zOj4sZWrHKyCD5_WSO_SyKflc2USKgtJWQlrjtfgB93Yt50XaUDCHQtljY02EFuvljxZwn9OyHCPHLxibcAKm3GeCJEW5SavRb2nX1lzLh8bYa4vZhWP0U1Ve1bklF2PigSOp0TtxOsdR9BklPsygFvWhOn_ar7Hsaw3SPMYrBauhB5d93bIY9qucZopu7kj8jZUUr07IH6BjJOYXW7TaDd" style="">
+<div class="flex justify-between items-center">
+<h5 class="font-headline font-bold text-primary" style="">Yield Forecast</h5>
+<span class="font-label text-[10px] px-2 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full" style="">+12% Projected</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-4 bg-white/80 dark:bg-[#151d20]/80 backdrop-blur-2xl rounded-t-[2.5rem] z-50 shadow-2xl no-line-rule">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#154212] to-[#2D5A27] text-white rounded-full px-6 py-2 transition-all active:scale-90 duration-300 ease-out" href="#" style="">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">home_max</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider" style="">ACCUEIL</span>
+</a>
+<!-- Fields -->
+<a class="flex flex-col items-center justify-center text-[#151d20]/50 dark:text-[#edf5f9]/50 px-6 py-2 transition-all hover:text-[#154212] active:scale-90 duration-300 ease-out" href="#" style="">
+<span class="material-symbols-outlined" style="">psychology_alt</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider" style="">CHAMPS</span>
+</a>
+<!-- Alerts -->
+<a class="flex flex-col items-center justify-center text-[#151d20]/50 dark:text-[#edf5f9]/50 px-6 py-2 transition-all hover:text-[#154212] active:scale-90 duration-300 ease-out" href="#" style="">
+<span class="material-symbols-outlined" style="">notifications_active</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-wider" style="">ALERTES</span>
+</a>
+</nav>
+<!-- Floating Action Button (FAB) - Suppression Logic: Only for main interaction -->
+<button class="fixed bottom-28 right-6 w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center shadow-2xl active:scale-90 transition-transform z-40" style="">
+<span class="material-symbols-outlined text-3xl" style="">water_drop</span>
+</button>
+</body></html>

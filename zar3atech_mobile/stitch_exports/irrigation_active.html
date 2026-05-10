@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirmation d'Irrigation - Zar3aTech</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#474836",
+                    "on-surface-variant": "#42493e",
+                    "on-secondary-fixed": "#0b2000",
+                    "surface-tint": "#3b6934",
+                    "tertiary": "#393a29",
+                    "surface-container-low": "#edf5f9",
+                    "on-primary": "#ffffff",
+                    "secondary": "#326b00",
+                    "on-surface": "#151d20",
+                    "surface-container-high": "#e1e9ee",
+                    "primary-fixed-dim": "#a1d494",
+                    "on-primary-fixed-variant": "#23501e",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#eaf2f6",
+                    "secondary-container": "#aef67b",
+                    "secondary-fixed-dim": "#93d962",
+                    "surface-container-highest": "#dce4e8",
+                    "primary-fixed": "#bcf0ae",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#50513f",
+                    "on-primary-container": "#9dd090",
+                    "on-background": "#151d20",
+                    "outline": "#72796e",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#a1d494",
+                    "tertiary-fixed": "#e4e4cc",
+                    "surface-container": "#e7eff3",
+                    "on-tertiary-fixed": "#1b1d0e",
+                    "surface": "#f3fbff",
+                    "primary-container": "#2d5a27",
+                    "tertiary-fixed-dim": "#c8c8b0",
+                    "surface-bright": "#f3fbff",
+                    "on-tertiary-container": "#c3c4ac",
+                    "outline-variant": "#c2c9bb",
+                    "on-primary-fixed": "#002201",
+                    "on-secondary-fixed-variant": "#245100",
+                    "primary": "#154212",
+                    "surface-variant": "#dce4e8",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#aef67b",
+                    "background": "#f3fbff",
+                    "inverse-surface": "#2a3235",
+                    "surface-dim": "#d3dbe0",
+                    "on-secondary-container": "#357200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #154212 0%, #2D5A27 100%);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col items-center antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-emerald-50/70 dark:bg-emerald-950/70 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-900 dark:text-emerald-50" data-icon="eco">eco</span>
+<h1 class="text-emerald-900 dark:text-emerald-50 font-manrope font-extrabold text-lg tracking-tight">Digital Greenhouse</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-surface-container-high bg-emerald-200">
+<img alt="Profil du Conservateur" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp1SfzNcil20nod7Bbqlks_Shb0VlRgzkyehk34v1gqdok-lCXMDzInal4XWLOK60M7q2gZFSZ4F0Oeu1H6GF2EEEcW0mmBuRqTzYHAJwZcTd426w3wpBX_F1S8xO5Ne2UUXioj-MlbsTlHF2kQQhnXBT2IoSGLCcPk97oZwX2pqdslaWinyURMMY1ncp1iXApPlopdeGldS_JWqueL1GYZv3GD2LmqQ65y8VDiwoWhmj4xyaQZhQpgrRnkb1tcmLIHO2By2P1ry9G"/>
+</div>
+</header>
+<main class="flex-1 w-full max-w-md px-6 pt-24 pb-32 flex flex-col items-center justify-center space-y-8 overflow-y-auto">
+<!-- Stylized Graphic Container -->
+<div class="relative w-full aspect-square flex items-center justify-center">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/10 to-secondary-container/5 rounded-full blur-3xl"></div>
+<div class="relative z-10 w-72 h-72 flex flex-col items-center justify-center bg-surface-container-lowest rounded-full shadow-2xl border border-white/50 overflow-hidden">
+<div class="absolute inset-0 editorial-gradient opacity-10"></div>
+<!-- Stylized Abstract Graphic -->
+<div class="relative flex flex-col items-center justify-center space-y-4">
+<div class="relative">
+<span class="material-symbols-outlined text-[100px] text-primary" style="font-variation-settings: 'FILL' 1;">potted_plant</span>
+<div class="absolute -top-4 -right-4 animate-pulse">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+</div>
+<div class="flex gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-primary/20"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary/60"></div>
+</div>
+</div>
+<div class="absolute bottom-6 px-6 py-2 editorial-gradient rounded-full shadow-lg">
+<p class="text-white font-headline font-extrabold text-xs tracking-[0.2em]">ACTIF</p>
+</div>
+</div>
+</div>
+<div class="text-center space-y-2">
+<h2 class="font-headline font-extrabold text-3xl text-primary tracking-tight">Irrigation en cours...</h2>
+<p class="text-on-surface-variant font-medium">Secteur Alpha - North Vineyards</p>
+</div>
+<div class="w-full grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-lg flex flex-col items-center justify-center space-y-1">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="timer">timer</span>
+<p class="font-label text-on-surface-variant uppercase tracking-widest text-[10px] font-bold">Temps restant</p>
+<p class="font-headline font-black text-2xl text-on-surface">19:45</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg flex flex-col items-center justify-center space-y-1">
+<span class="material-symbols-outlined text-secondary mb-2" data-icon="water_drop">water_drop</span>
+<p class="font-label text-on-surface-variant uppercase tracking-widest text-[10px] font-bold">Volume estimé</p>
+<p class="font-headline font-black text-2xl text-on-surface">450 Litres</p>
+</div>
+</div>
+<div class="w-full pt-8">
+<button class="w-full bg-error-container text-on-error-container font-headline font-extrabold py-5 rounded-full flex items-center justify-center gap-3 active:scale-95 transition-all duration-200 shadow-sm">
+<span class="material-symbols-outlined" data-icon="stop_circle">stop_circle</span>
+                ARRÊTER L'IRRIGATION
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-8 pb-6 pt-3 bg-emerald-50/80 dark:bg-emerald-950/80 backdrop-blur-2xl rounded-t-[2.5rem] z-50 shadow-[0_-8px_30px_rgb(0,0,0,0.04)] shadow-2xl">
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40 hover:text-emerald-700 dark:hover:text-emerald-100 active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="home_max">home_max</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-emerald-800 to-emerald-950 text-white rounded-full w-16 h-16 -mt-8 shadow-lg active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="potted_plant" style="font-variation-settings: 'FILL' 1;">potted_plant</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Fields</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/40 hover:text-emerald-700 dark:hover:text-emerald-100 active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Alerts</span>
+</a>
+</nav>
+</body></html>

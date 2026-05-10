@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#9dd090",
+                    "on-secondary-fixed": "#0b2000",
+                    "on-primary-fixed": "#002201",
+                    "on-error-container": "#93000a",
+                    "primary": "#154212",
+                    "on-tertiary-fixed": "#1b1d0e",
+                    "on-background": "#151d20",
+                    "surface-dim": "#d3dbe0",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#dce4e8",
+                    "on-secondary-container": "#357200",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#23501e",
+                    "secondary-container": "#aef67b",
+                    "primary-container": "#2d5a27",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#a1d494",
+                    "surface-container-low": "#edf5f9",
+                    "secondary": "#326b00",
+                    "tertiary": "#393a29",
+                    "primary-fixed": "#bcf0ae",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#e4e4cc",
+                    "background": "#f3fbff",
+                    "surface-container": "#e7eff3",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f3fbff",
+                    "inverse-surface": "#2a3235",
+                    "inverse-on-surface": "#eaf2f6",
+                    "on-surface": "#151d20",
+                    "on-tertiary-fixed-variant": "#474836",
+                    "tertiary-fixed-dim": "#c8c8b0",
+                    "surface-container-highest": "#dce4e8",
+                    "secondary-fixed-dim": "#93d962",
+                    "on-secondary-fixed-variant": "#245100",
+                    "secondary-fixed": "#aef67b",
+                    "surface-tint": "#3b6934",
+                    "on-surface-variant": "#42493e",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c2c9bb",
+                    "outline": "#72796e",
+                    "on-tertiary-container": "#c3c4ac",
+                    "tertiary-container": "#50513f",
+                    "surface-container-high": "#e1e9ee",
+                    "surface-bright": "#f3fbff",
+                    "primary-fixed-dim": "#a1d494"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-effect {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface min-h-screen flex flex-col items-center justify-center overflow-x-hidden">
+<!-- TopAppBar Fragment (Hidden Shell Suppression for Transactional Flow - but showing Brand Anchor) -->
+<nav class="fixed top-0 w-full z-50 bg-[#f3fbff]/70 dark:bg-[#151d20]/70 backdrop-blur-3xl flex items-center justify-center px-6 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-900 dark:text-emerald-50" data-icon="eco">eco</span>
+<span class="text-emerald-900 dark:text-emerald-50 font-black tracking-tighter font-headline text-lg">Zar3aTech</span>
+</div>
+</nav>
+<!-- Main Registration Canvas -->
+<main class="w-full max-w-md px-6 pt-24 pb-12 relative">
+<!-- Background Organic Shape Decor -->
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary-fixed/30 blur-3xl rounded-full -z-10"></div>
+<div class="absolute top-1/2 -left-12 w-48 h-48 bg-secondary-container/20 blur-3xl rounded-full -z-10"></div>
+<div class="flex flex-col gap-8">
+<!-- Header Section -->
+<div class="flex flex-col gap-2">
+<h1 class="font-headline font-extrabold text-[2.5rem] leading-tight text-primary tracking-tight">
+                    Rejoignez Zar3aTech
+                </h1>
+<p class="text-on-surface-variant font-body text-lg">
+                    Cultivez l'avenir de l'agriculture numérique avec nous.
+                </p>
+</div>
+<!-- Registration Card -->
+<div class="bg-surface-container-lowest rounded-lg p-8 shadow-[0px_12px_32px_rgba(21,29,32,0.06)] relative overflow-hidden">
+<!-- Subtle Texture/Overlay -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
+<form class="flex flex-col gap-6 relative z-10">
+<!-- Input: Full Name -->
+<div class="flex flex-col gap-2">
+<label class="font-label font-semibold text-label-md text-primary ml-1" for="full_name">Nom complet</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-low border-none rounded-[1.5rem] py-4 px-6 focus:ring-2 focus:ring-primary/20 transition-all font-body text-on-surface placeholder:text-on-surface-variant/50" id="full_name" placeholder="Jean Dupont" type="text"/>
+<span class="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-on-surface-variant/40 group-focus-within:text-primary transition-colors" data-icon="person">person</span>
+</div>
+</div>
+<!-- Input: Email -->
+<div class="flex flex-col gap-2">
+<label class="font-label font-semibold text-label-md text-primary ml-1" for="email">E-mail</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-low border-none rounded-[1.5rem] py-4 px-6 focus:ring-2 focus:ring-primary/20 transition-all font-body text-on-surface placeholder:text-on-surface-variant/50" id="email" placeholder="jean.dupont@agri.com" type="email"/>
+<span class="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-on-surface-variant/40 group-focus-within:text-primary transition-colors" data-icon="mail">mail</span>
+</div>
+</div>
+<!-- Input: Password -->
+<div class="flex flex-col gap-2">
+<label class="font-label font-semibold text-label-md text-primary ml-1" for="password">Mot de passe</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-low border-none rounded-[1.5rem] py-4 px-6 focus:ring-2 focus:ring-primary/20 transition-all font-body text-on-surface placeholder:text-on-surface-variant/50" id="password" placeholder="••••••••" type="password"/>
+<span class="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-on-surface-variant/40 group-focus-within:text-primary transition-colors" data-icon="lock">lock</span>
+</div>
+</div>
+<!-- Input: Confirm Password -->
+<div class="flex flex-col gap-2">
+<label class="font-label font-semibold text-label-md text-primary ml-1" for="confirm_password">Confirmer le mot de passe</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-low border-none rounded-[1.5rem] py-4 px-6 focus:ring-2 focus:ring-primary/20 transition-all font-body text-on-surface placeholder:text-on-surface-variant/50" id="confirm_password" placeholder="••••••••" type="password"/>
+<span class="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-on-surface-variant/40 group-focus-within:text-primary transition-colors" data-icon="verified_user">verified_user</span>
+</div>
+</div>
+<!-- Terms & Conditions -->
+<div class="flex items-start gap-3 px-1">
+<div class="flex items-center h-5">
+<input class="h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary/20 bg-surface-container-low cursor-pointer transition-all" id="terms" name="terms" type="checkbox"/>
+</div>
+<div class="text-sm">
+<label class="font-body text-on-surface-variant leading-snug" for="terms">
+                                J'accepte les <a class="text-primary font-semibold hover:underline" href="#">conditions d'utilisation</a> et la <a class="text-primary font-semibold hover:underline" href="#">politique de confidentialité</a>.
+                            </label>
+</div>
+</div>
+<!-- Primary CTA -->
+<button class="w-full mt-4 bg-gradient-to-br from-primary to-primary-container text-white py-4 px-8 rounded-full font-headline font-bold text-lg shadow-lg active:scale-[0.97] transition-all duration-200 flex items-center justify-center gap-2 group" type="submit">
+                        Créer un compte
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Login Link -->
+<div class="flex flex-col items-center gap-6">
+<p class="font-body text-on-surface-variant">
+                    Déjà un compte ? 
+                    <a class="text-primary font-bold hover:text-primary-container transition-colors ml-1" href="#">Se connecter</a>
+</p>
+<!-- Divider Alternative: Editorial Spacing -->
+<div class="flex items-center gap-4 w-full">
+<div class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent"></div>
+<span class="text-label-md font-label uppercase tracking-widest text-on-surface-variant/60">Ou continuer avec</span>
+<div class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent"></div>
+</div>
+<!-- Social Proof / Contextual Image -->
+<div class="w-full rounded-lg overflow-hidden h-32 relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="lush green rows of young vegetable plants in a field with early morning soft sunlight and dew drops" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh2Xs9yBH8qHyUlql1kQ1IwzJrymo7TX_R8RPmu5IlxOt3OA-8ghbNR1hDsfazoynXqgLOd-4LgQI-7uLFItq8ay-lu6ZxXTba1-bWbxOS7hpHrAzjM8Vig2kaOvy97VbIdJTch7hlmDx1a0eOH-pNqGv9JwLoFewfcd11JkNKe8nEgSioVjeE3-XW7ZV30RGtC5iihypORii1GgW1uWvdhZ28sZitvexpl2e__k7AfgeYd-v58h75-UyYNtdFngfjLPAQeykaHuo5"/>
+<div class="absolute inset-0 bg-primary/40 flex items-center justify-center">
+<span class="text-white font-headline font-bold tracking-tight px-4 text-center text-sm">Agriculture durable par l'innovation technique</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Suppressed Shell Message or Space for Keyboard Safety -->
+<footer class="mt-auto pb-8 text-center text-on-surface-variant/40 font-label text-[10px] uppercase tracking-widest">
+        Zar3aTech Mobile Ecosystem • v1.0.4
+    </footer>
+</body></html>
