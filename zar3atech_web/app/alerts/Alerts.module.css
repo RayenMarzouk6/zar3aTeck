@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.alertList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.alertCard {
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.alertCard:hover {
+  transform: translateX(8px);
+}
+
+.alertStatus {
+  width: 4px;
+  height: 48px;
+  border-radius: 99px;
+}
+
+.statusCritical {
+  background: var(--color-danger);
+  box-shadow: 0 0 12px var(--color-danger);
+}
+
+.statusWarning {
+  background: var(--color-accent);
+  box-shadow: 0 0 12px var(--color-accent);
+}
+
+.statusInfo {
+  background: var(--color-secondary);
+}
+
+.alertIcon {
+  font-size: 1.5rem;
+}
+
+.alertContent {
+  flex: 1;
+}
+
+.alertTitle {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.alertTime {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.actionButton {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-glass);
+  border: var(--border-glass);
+  color: var(--color-text-main);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  background: var(--color-text-main);
+  color: var(--color-bg-dark);
+}
